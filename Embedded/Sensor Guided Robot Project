@@ -1,0 +1,133 @@
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(13,OUTPUT);// led
+
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
+
+  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
+
+
+
+
+}
+
+void loop() {
+  //moveRobot("Stop");
+  
+  int sensorValue1 = analogRead(A0);
+  int sensorValue2 = analogRead(A1);
+
+  Serial.println("Sensor value1 is" + String(sensorValue1));
+  Serial.println("Sensor value2 is" + String(sensorValue2));
+ delay(1000);
+
+
+
+
+  if(sensorValue1 < 200 && sensorValue2 < 200){
+  
+    moveRobot("Forward");
+   digitalWrite(13, HIGH);
+   
+
+  }else if(sensorValue2 < 600 && sensorValue1 > 600){
+    
+    moveRobot("Left");
+     digitalWrite(13, HIGH);
+     
+
+  }else if(sensorValue1 < 600 && sensorValue2 > 600){
+   
+    moveRobot("Right");
+     digitalWrite(13, HIGH);
+     
+
+  }else if(sensorValue1 > 600 && sensorValue2 > 600){
+    moveRobot("Stop");
+     digitalWrite(13, LOW);
+  }
+
+ 
+
+
+  
+}
+
+void moveRobot(String motion){
+  if(motion == "Forward"){ 
+
+    digitalWrite(8, HIGH); // clockwise
+    digitalWrite(9, LOW); // right wheel
+
+    digitalWrite(10, HIGH);//left wheel
+    digitalWrite(11, LOW); // clockwise
+    delay(1000);
+
+      digitalWrite(11, LOW); // clockwise
+      digitalWrite(10, LOW);//left wheel
+
+      digitalWrite(8, LOW); // clockwise
+      digitalWrite(9, LOW);
+
+    
+
+   
+
+  }else if(motion == "Back" ){
+  
+
+      digitalWrite(11, HIGH); // counter clockwise
+      digitalWrite(10, LOW);//left wheel
+
+      digitalWrite(8, LOW); // counterclockwise
+      digitalWrite(9, HIGH);   // right wheel
+
+
+  }else if(motion == "Left"){
+  
+      digitalWrite(11, LOW); // clockwise
+      digitalWrite(10, HIGH);
+
+      digitalWrite(8, LOW); // counter clockwise
+      digitalWrite(9, HIGH); // right wheel
+
+
+  }else if(motion == "Right"){
+     
+
+
+    digitalWrite(11, HIGH); // counter clockwise
+    digitalWrite(10, LOW);//left wheel
+
+    digitalWrite(8, HIGH); // counter clockwise
+    digitalWrite(9, LOW); // right wheel
+
+
+
+
+
+
+  }else if(motion == "Stop"){
+      digitalWrite(11, LOW); // clockwise
+      digitalWrite(10, LOW);//left wheel
+
+      digitalWrite(8, LOW); // clockwise
+      digitalWrite(9, LOW); // right wheel
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
