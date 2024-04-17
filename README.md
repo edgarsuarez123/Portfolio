@@ -1,11 +1,11 @@
 # Portfolio
 
 
-Summary:
+## **Summary:**
 
 Motivated Computer Engineering student with a strong academic background and hands-on experience in software and hardware development. Currently pursuing a Bachelor's Degree at the University of Puerto Rico, Mayagüez Campus, with an expected graduation in May 2025. Possesses a diverse skill set encompassing programming languages, digital logic design, and proficiency in utilizing various tools and technologies.
 
-Skills:
+## **Skills:**
 
 Proficient in a variety of programming languages including C++, Java, Python, and Assembly.
 Experienced in circuit building, VMWare, Acronis Media, PC building, and utilizing tools like GitHub and VsCode for software development.
@@ -13,7 +13,7 @@ Familiar with hardware tools such as oscilloscopes, multimeters, and platforms l
 Knowledgeable in digital design languages like Verilog and technologies like React Native, JavaScript, and FreeRTOS.
 
 
-Interests in AI:
+## **Interests in AI:**
 
 Machine Learning Algorithms: Fascinated by the intricate patterns and insights that data can reveal, I'm particularly drawn to exploring machine learning algorithms. My coursework in Probability and Statistics, coupled with proficiency in programming languages such as Python and Java, fuels my curiosity to delve deeper into the realms of supervised learning, unsupervised learning, and reinforcement learning.
 
