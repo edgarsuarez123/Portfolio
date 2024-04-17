@@ -1,4 +1,4 @@
-Description of Sensor Guided Robot:
+## Description of Sensor Guided Robot:
 
 This code is written for controlling a robot with two sensors and two motors connected to an Arduino board.
 
@@ -29,9 +29,9 @@ Based on the value of motion, it activates the appropriate motor pins to achieve
 "Stop": Stops both motors.
 This code essentially reads sensor values to detect obstacles and controls the robot's motion accordingly, allowing it to move forward, turn left, turn right, or stop based on the sensor readings. Additionally, it blinks an LED on pin 13 to indicate when the robot is in motion.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Description of Temperature Measurement ESP32:
+
+## Description of Temperature Measurement ESP32:
 
 This code is for an ESP32 microcontroller-based project that involves Wi-Fi connectivity, MQTT messaging, ultrasonic distance sensing, and temperature monitoring. 
 Include Libraries:
