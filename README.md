@@ -4,7 +4,7 @@
 
 <div align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1A6DD4&center=true&vCenter=true&width=620&lines=U.S.+Air+Force+PAQ+Program+%C2%B7+Incoming+May+2026;B.S.+Computer+Engineering+%E2%80%93+UPR+Mayag%C3%BCez;Building+AI+systems+that+ship+real+results" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1A6DD4&center=true&vCenter=true&width=620&lines=AI+engineer+who+solves+problems+in+constrained+environments;No+gantry%3F+No+budget%3F+No+staff%3F+Ship+it+anyway.;Defense+%C2%B7+Healthcare+%C2%B7+Biomedical+AI" alt="Typing SVG" />
   </a>
 </div>
 
@@ -19,7 +19,7 @@
 
 <br/>
 
-I build AI/ML systems for defense, healthcare, and biomedical applications — from X-ray CT reconstruction to HIPAA-compliant SaaS. Every project below went from zero to a working prototype with measurable, quantitative results.
+I build AI systems that work under real constraints — no gantry, no staff bandwidth, no clean data, no 360° arc. I find the constraint, strip the problem to its core, and ship something that hits a quantitative gate. Defense, healthcare, biomedical — every project below has numbers to back it up.
 
 ---
 
@@ -97,7 +97,20 @@ I build AI/ML systems for defense, healthcare, and biomedical applications — f
 
 ---
 
-Also built: **[drone_detection](https://github.com/edgarsuarez123/drone_detection)** — YOLOv8 + Streamlit real-time object detection from webcam/video with SQL logging and analytics dashboard.
+### [drone_detection](https://github.com/edgarsuarez123/drone_detection) — Real-Time Object Detection with Logging & Analytics
+
+**End-to-end object detection app: YOLOv8 running on live webcam or uploaded video, every detection logged to SQL, analytics dashboard built on top.**
+
+- Configurable confidence threshold and frame-skip rate for CPU/GPU trade-off
+- Detections persisted per-source with class, confidence, and bounding box coordinates
+- Analytics tab: detections by class (bar) and detections by hour (time-series line chart)
+
+<div>
+  <img src="https://img.shields.io/badge/YOLOv8-111111?style=for-the-badge&logo=yolo&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white" />
+</div>
 
 ---
 
