@@ -16,7 +16,7 @@
 
 <br>
 
-I build AI for environments where the standard assumptions break — no gantry, no clean data, no full sensor access, no staff bandwidth. Every project below has a quantitative acceptance gate and hits it.
+Full-stack AI engineer, healthcare and defense. My projects span real-time closed-loop medical device pipelines, HIPAA-compliant SaaS, and patent-implementing simulation engines — built to quantitative acceptance gates, not just working demos. B.S. Computer Engineering, UPR Mayagüez · U.S. Air Force Software Engineer.
 
 ---
 
