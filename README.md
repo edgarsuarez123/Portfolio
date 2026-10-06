@@ -22,35 +22,6 @@ I build AI for environments where the standard assumptions break — no gantry, 
 
 ## Projects
 
-### [OneShotXray](https://github.com/edgarsuarez123/OneShotXray) &nbsp;—&nbsp; Freehand X-Ray CT
-
-Standard CT requires a precision gantry. This doesn't. Implementation of U.S. Patent 12,327,378 B2 (Self-Determined Shot Geometry) for two SBIR Phase I proposals: Navy ship hull NDT and NIH bedside brain hemorrhage monitoring in the ICU. Built from scratch in 5 days.
-
-| Track | Metric | Target | Result |
-|---|---|---|---|
-| Navy | SDSG solver residual | < 0.2 px | **0.084 px** |
-| NIH | mART CNR @ 5mm hemorrhage | ≥ 4.0 | **7.1** |
-| NIH | Hemorrhage ROC AUC | > 0.75 | **0.92** |
-
-FBP on a 180° ICU-constrained arc is non-diagnostic (SSIM = 0.013). mART on the same data hits CNR 7.1. That gap is the whole argument.
-
-`Python` `ASTRA Toolbox` `CUDA` `NumPy` `SciPy` `h5py`
-
----
-
-### [AF-VNS](https://github.com/edgarsuarez123/AF-VNS) &nbsp;—&nbsp; Closed-Loop AI for Vagus Nerve Stimulation
-
-Three independent real-time pipelines for auricular vagus nerve stimulation — AF/NSR classification, stroke-timed delivery (diastole + exhalation gate), and tinnitus suppression (tri-fold: cardiac + respiratory + arousal). Shared signal processing core, hardware-grade latency targets.
-
-- Tinnitus arousal classifier AUROC **0.930** on WESAD (target > 0.80); tri-fold gating cut stimulation rate by **98.5%**
-- Stroke pipeline diastole accuracy **84.3%**, p95 latency **116ms** on CVES (228 records)
-- AF ensemble: CNN + GRU + Transformer over ECG + 7 HRV features; trained on MIT-BIH AF, MIMIC-III, Challenge 2017
-- 500+ tests across all three pipelines
-
-`Python` `PyTorch` `scikit-learn` `neurokit2` `GBT`
-
----
-
 ### [CallCenterAI](https://github.com/edgarsuarez123/CallCenterAI) &nbsp;—&nbsp; HEDIS Outreach Platform
 
 Primary care clinics receive monthly HEDIS care-gap lists but don't have staff bandwidth to work them. This SaaS places the calls via Retell AI, records outcomes, and generates reports — no staff intervention. Built HIPAA-compliant from the ground up.
@@ -73,6 +44,35 @@ Revenue tracking, provider cost analysis, staffing simulations, and natural-lang
 - 3 least-privilege DB roles, read-only containers, `cap_drop: ALL`, client-side PDF extraction
 
 `React 19` `TypeScript` `FastAPI` `PostgreSQL 17` `Ollama` `Docker`
+
+---
+
+### [AF-VNS](https://github.com/edgarsuarez123/AF-VNS) &nbsp;—&nbsp; Closed-Loop AI for Vagus Nerve Stimulation
+
+Three independent real-time pipelines for auricular vagus nerve stimulation — AF/NSR classification, stroke-timed delivery (diastole + exhalation gate), and tinnitus suppression (tri-fold: cardiac + respiratory + arousal). Shared signal processing core, hardware-grade latency targets.
+
+- Tinnitus arousal classifier AUROC **0.930** on WESAD (target > 0.80); tri-fold gating cut stimulation rate by **98.5%**
+- Stroke pipeline diastole accuracy **84.3%**, p95 latency **116ms** on CVES (228 records)
+- AF ensemble: CNN + GRU + Transformer over ECG + 7 HRV features; trained on MIT-BIH AF, MIMIC-III, Challenge 2017
+- 500+ tests across all three pipelines
+
+`Python` `PyTorch` `scikit-learn` `neurokit2` `GBT`
+
+---
+
+### [OneShotXray](https://github.com/edgarsuarez123/OneShotXray) &nbsp;—&nbsp; Freehand X-Ray CT
+
+Standard CT requires a precision gantry. This doesn't. Implementation of U.S. Patent 12,327,378 B2 (Self-Determined Shot Geometry) for two SBIR Phase I proposals: Navy ship hull NDT and NIH bedside brain hemorrhage monitoring in the ICU. Built from scratch in 5 days.
+
+| Track | Metric | Target | Result |
+|---|---|---|---|
+| Navy | SDSG solver residual | < 0.2 px | **0.084 px** |
+| NIH | mART CNR @ 5mm hemorrhage | ≥ 4.0 | **7.1** |
+| NIH | Hemorrhage ROC AUC | > 0.75 | **0.92** |
+
+FBP on a 180° ICU-constrained arc is non-diagnostic (SSIM = 0.013). mART on the same data hits CNR 7.1. That gap is the whole argument.
+
+`Python` `ASTRA Toolbox` `CUDA` `NumPy` `SciPy` `h5py`
 
 ---
 
