@@ -1,89 +1,121 @@
-# Edgar J. Suárez Colón
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waveBottom&color=0:0d1117,100:1a6dd4&height=220&section=header&text=Edgar%20J.%20Su%C3%A1rez%20Col%C3%B3n&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%C2%B7%20AI%2FML%20%C2%B7%20Biomedical%20Systems&descSize=18&descAlignY=55&descColor=b0c4de" width="100%" />
+</div>
 
-**Software Engineer · AI/ML · Biomedical Systems**
-U.S. Air Force Palace Acquire (PAQ) Program · Incoming May 2026
-B.S. Computer Engineering, University of Puerto Rico – Mayagüez
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1A6DD4&center=true&vCenter=true&width=620&lines=U.S.+Air+Force+PAQ+Program+%C2%B7+Incoming+May+2026;B.S.+Computer+Engineering+%E2%80%93+UPR+Mayag%C3%BCez;Building+AI+systems+that+ship+real+results" alt="Typing SVG" />
+  </a>
+</div>
 
-[GitHub](https://github.com/edgarsuarez123) · [LinkedIn](https://linkedin.com/in/edgarjsuarez)
+<div align="center">
+  <a href="https://linkedin.com/in/edgarjsuarez">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/edgarsuarez123">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</div>
+
+<br/>
+
+I build AI/ML systems for defense, healthcare, and biomedical applications — from X-ray CT reconstruction to HIPAA-compliant SaaS. Every project below went from zero to a working prototype with measurable, quantitative results.
 
 ---
 
-## Projects
+## Featured Projects
 
 ### [OneShotXray](https://github.com/edgarsuarez123/OneShotXray) — Freehand X-Ray CT Simulation Pipeline
 
-> Computational preliminary data for two concurrent SBIR Phase I proposals implementing U.S. Patent 12,327,378 B2 (Self-Determined Shot Geometry). Built in a 5-day sprint.
+**Computational proof-of-concept implementing U.S. Patent 12,327,378 B2 (Self-Determined Shot Geometry) for two concurrent SBIR Phase I proposals — Navy ship hull NDT and NIH bedside brain hemorrhage detection. Built in a 5-day sprint.**
 
-Two tracks — Navy ship hull NDT (200 keV steel) and NIH bedside brain hemorrhage CT (70 keV, ICU-constrained 180° arc). Complete pipeline from physics-based phantom generation → forward projection → SDSG geometry recovery → iterative reconstruction → quantitative figures.
+- SDSG solver residual **0.084 px** (target < 0.2 px) and **0.077 px** on NIH track — geometry recovered from 2D projections alone, no external tracker
+- mART CNR **7.1** on 5mm hemorrhage from a 180° ICU-constrained arc where FBP is completely non-diagnostic (SSIM = 0.013)
+- Hemorrhage detection ROC **AUC = 0.92** (target > 0.75) on 10+10 simulated trials
+- Full pipeline: physics-based phantom → ASTRA cone_vec projection → Poisson noise → SDSG solver → iterative reconstruction → proposal-quality figures
 
-| Track | Gate | Target | Achieved |
-|-------|------|--------|----------|
-| Navy | SDSG solver residual | < 0.2 px | **0.084 px** |
-| Navy | mART CNR @ 0.8mm crack | ≥ 4.0 | **> 4.0** |
-| NIH | SDSG solver residual | < 0.3 px | **0.077 px** |
-| NIH | mART CNR @ 5mm hemorrhage | ≥ 4.0 | **7.1** |
-| NIH | ROC AUC — hemorrhage detection | > 0.75 | **0.92** |
-
-**Stack:** Python 3.11 · ASTRA Toolbox 2.4.1 (CUDA) · NumPy · SciPy · scikit-image · h5py · matplotlib
-
----
-
-### [CallCenterAI](https://github.com/edgarsuarez123/CallCenterAI) — HEDIS Outreach Automation Platform
-
-> Multi-tenant SaaS that automates HEDIS care-gap outreach for primary care clinics. Clinics upload a patient CSV; the system places AI voice calls via Retell AI, records outcomes, and generates reports — without staff intervention.
-
-- **HIPAA-compliant** — AES-256-GCM PHI encryption at rest, phones masked in all logs, HMAC-SHA256 webhook verification
-- **Multi-tenant** — row-level `clinic_id` scoping on every table and query
-- **Business impact** — automating outreach from 40% → 80% gap closure on 500 patients = $8–16K additional reimbursement per cycle
-- Full async FastAPI backend, PostgreSQL, Docker, CI, React dashboard, and a senior-engineer system design report
-
-**Stack:** FastAPI · PostgreSQL 15 · SQLAlchemy 2.0 async · AES-256-GCM · Retell AI · Docker · Azure (HIPAA BAA)
-
----
-
-### [Clinic Financial Intelligence](https://github.com/edgarsuarez123/clinic-financial-intelligence) — AI-Powered Financial Analytics for Medical Clinics
-
-> Full-stack platform for clinic revenue tracking, provider cost analysis, staffing budget simulations, and natural-language financial queries — answered safely without arbitrary code execution.
-
-- **Ask Clarity** — text-to-SQL with an exact catalog allowlist (6 reviewed query shapes); AI cites only values returned from the DB, never invents numbers
-- **209 Python tests + 38 React/Vitest tests**, GitHub Actions CI
-- **37 Architectural Decision Records** documenting every major design choice
-- 3 least-privilege DB roles, read-only containers, `cap_drop: ALL`, client-side PDF extraction (PHI never transmitted)
-
-**Stack:** React 19 · TypeScript · FastAPI · PostgreSQL 17 · Ollama (local LLM) · Docker · nginx
+<div>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" />
+</div>
 
 ---
 
 ### [AF-VNS](https://github.com/edgarsuarez123/AF-VNS) — Closed-Loop AI for Vagus Nerve Stimulation
 
-> Three independent real-time AI pipelines for auricular vagus nerve stimulation — sharing a common signal processing core and closed-loop inference architecture.
+**Three independent real-time AI pipelines for auricular vagus nerve stimulation — AF/NSR classification, stroke-timed delivery, and tinnitus suppression — sharing a common signal processing core.**
 
-| Pipeline | Signals | Key Result |
-|----------|---------|------------|
-| AF vs NSR classification | ECG + HRV | CNN + GRU + Transformer ensemble, AUROC target ≥ 0.75 |
-| Stroke bifold closed-loop VNS | ECG | Diastole accuracy 84.3%, p95 latency **116ms** |
-| Tinnitus tri-fold closed-loop VNS | PPG + EDA | Arousal classifier AUROC **0.930**, stim rate reduced 98.5% |
+- Tinnitus arousal classifier **AUROC 0.930** (target > 0.80) trained on WESAD; stimulation rate reduced **98.5%** via tri-fold gating
+- Stroke pipeline diastole accuracy **84.3%** at **p95 latency 116ms** (target < 200ms) on CVES dataset (228 records)
+- AF classification ensemble: CNN + GRU + Transformer over ECG + 7 HRV features; trained on MIT-BIH AF, MIMIC-III, Challenge 2017
+- **500+ tests** across all three pipelines; trained on real medical datasets (MIT-BIH AF, MIMIC-III, CVES, WESAD, SHaRe)
 
-- Trained on MIT-BIH AF, MIMIC-III, CVES, WESAD, and SHaRe datasets
-- 500+ tests across all three pipelines
-
-**Stack:** Python · PyTorch · neurokit2 · scikit-learn · GBT
-
----
-
-### [Drone Detection](https://github.com/edgarsuarez123/drone_detection) — Real-Time Object Detection with Analytics
-
-> Streamlit app running YOLOv8 on live webcam or uploaded video, logging every detection to a SQL database with an analytics dashboard (detections by class and by hour).
-
-**Stack:** YOLOv8 · Streamlit · OpenCV · SQLAlchemy · Plotly
+<div>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+</div>
 
 ---
 
-## Skills
+### [CallCenterAI](https://github.com/edgarsuarez123/CallCenterAI) — HEDIS Outreach Automation Platform
 
-**Languages:** Python · TypeScript · JavaScript · C++ · Java · SQL
-**AI/ML:** PyTorch · ASTRA Toolbox · scikit-learn · YOLOv8 · Transformer architectures · text-to-SQL
-**Backend:** FastAPI · SQLAlchemy · PostgreSQL · Docker · Alembic · asyncio
-**Frontend:** React 19 · Vite · Recharts
-**Security:** AES-256-GCM · HIPAA compliance · HMAC · least-privilege DB roles
-**Other:** CUDA · Git · GitHub Actions · Azure · Streamlit
+**HIPAA-compliant multi-tenant SaaS that automates HEDIS care-gap outreach for primary care clinics — AI voice calls via Retell AI, outcome logging, and campaign reports with no staff intervention.**
+
+- Projected **$8–16K additional reimbursement per cycle** per clinic by lifting care-gap closure from ~40% to ~80% on 500-patient lists
+- **AES-256-GCM** PHI encryption at rest; phones never stored or logged in plaintext; **HMAC-SHA256** webhook verification on all Retell callbacks
+- Row-level `clinic_id` scoping on every table and query; Azure deployment with active HIPAA BAA
+- Full async FastAPI backend, PostgreSQL 15, Docker, CI, React dashboard, and a 40-page senior-engineer system design report
+
+<div>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
+</div>
+
+---
+
+### [Clinic Financial Intelligence](https://github.com/edgarsuarez123/clinic-financial-intelligence) — AI-Powered Financial Analytics for Medical Clinics
+
+**Full-stack financial analytics platform with a safe text-to-SQL engine — natural-language queries over clinic revenue data answered with exact DB values, no hallucinated numbers, no arbitrary code execution.**
+
+- Text-to-SQL with an **exact catalog allowlist** (6 reviewed query shapes, read-only role, 5-second statement timeout) — AI cites only values returned from the database
+- **209 Python tests + 38 React/Vitest tests**, GitHub Actions CI; **37 Architectural Decision Records**
+- 3 least-privilege DB roles, read-only containers, `cap_drop: ALL`, client-side PDF extraction (PHI never transmitted)
+- Features: revenue explorer, budget & scenario workspace, staffing cost modeling, multi-insurer breakdowns
+
+<div>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+</div>
+
+---
+
+Also built: **[drone_detection](https://github.com/edgarsuarez123/drone_detection)** — YOLOv8 + Streamlit real-time object detection from webcam/video with SQL logging and analytics dashboard.
+
+---
+
+## Tech Stack
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=python,typescript,react,fastapi,postgres,pytorch,docker,azure,git,linux&theme=dark" />
+</div>
+
+---
+
+## GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=edgarsuarez123&show_icons=true&theme=github_dark&hide_border=true" height="170" />
+  <img src="https://streak-stats.demolab.com/?user=edgarsuarez123&theme=github-dark-blue&hide_border=true" height="170" />
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waveTop&color=0:1a6dd4,100:0d1117&height=120&section=footer" width="100%" />
+</div>
