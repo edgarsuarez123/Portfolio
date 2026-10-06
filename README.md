@@ -87,7 +87,7 @@ YOLOv8 on live webcam or uploaded video — every detection (class, confidence, 
 ## Stack
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,typescript,react,fastapi,postgres,docker,azure,git,linux&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=python,pytorch,numpy,opencv,typescript,react,vite,fastapi,postgres,docker,azure,git,github,linux&theme=dark" />
 </div>
 
 ---
